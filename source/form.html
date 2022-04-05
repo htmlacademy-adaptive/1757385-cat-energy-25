@@ -3,6 +3,7 @@
   <head class="page" lang="ru">
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <!-- Main header -->
@@ -19,7 +20,7 @@
         <div class="main-nav__body">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">
+              <a class="main-nav__link">
                 Главная
               </a>
             </li>
@@ -29,7 +30,7 @@
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">
+              <a class="main-nav__link main-nav__link--active" href="#">
                 Подбор программы
               </a>
             </li>
@@ -51,19 +52,19 @@
               <li class="form-program__control-item">
                 <label class="form-program__control">
                   <span class="form-program__control-label">Имя:*</span>
-                  <input class="form-program__control-input" type="text" name="cat-name" required>
+                  <input class="form-program__control-input" type="text" name="cat-name" value="Барсик" required>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
                   <span class="form-program__control-label">Вес (кг):*</span>
-                  <input class="form-program__control-input" type="text" name="cat-weight" required>
+                  <input class="form-program__control-input" type="text" name="cat-weight" value="7" required>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
                   <span class="form-program__control-label">Возраст (лет):</span>
-                  <input class="form-program__control-input" type="number" name="cat-age">
+                  <input class="form-program__control-number" type="number" name="cat-age" value="7">
                 </label>
               </li>
             </ul>
@@ -72,21 +73,21 @@
             <ul class="form-program__control-list">
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="radio" name="program" checked>
+                  <input class="form-program__control-radio" type="radio" name="program" checked>
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Похудение</span>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="radio" name="program">
+                  <input class="form-program__control-radio" type="radio" name="program">
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Набор массы</span>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="radio" name="program">
+                  <input class="form-program__control-radio" type="radio" name="program">
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Не знаю (Нужен ваш совет)</span>
                 </label>
@@ -99,13 +100,13 @@
               <li class="form-program__control-item">
                 <label class="form-program__control">
                   <span class="form-program__control-label">E-mail:*</span>
-                  <input class="form-program__control-input form-program__control-input--email" type="email" name="e-mail" required>
+                  <input class="form-program__control-input form-program__control-input--email" type="email" name="e-mail" value="kuklachev@gmail.com" required>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
                   <span class="form-program__control-label">Телефон:*</span>
-                  <input class="form-program__control-input form-program__control-input--tel" type="tel" name="tel" required>
+                  <input class="form-program__control-input form-program__control-input--tel" type="tel" name="tel" value="8 (960) 900-60-90" required>
                 </label>
               </li>
             </ul>
@@ -119,28 +120,28 @@
             <ul class="form-program__control-list">
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="checkbox" name="item-sweetener" checked>
+                  <input class="form-program__control-checkbox" type="checkbox" name="item-sweetener" checked>
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="checkbox" name="item-water">
+                  <input class="form-program__control-checkbox" type="checkbox" name="item-water">
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Питьевая вода</span>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="checkbox" name="item-milk">
+                  <input class="form-program__control-checkbox" type="checkbox" name="item-milk">
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Молоко</span>
                 </label>
               </li>
               <li class="form-program__control-item">
                 <label class="form-program__control">
-                  <input class="form-program__control-input" type="checkbox" name="item-vitamins">
+                  <input class="form-program__control-checkbox" type="checkbox" name="item-vitamins">
                   <span class="form-program__control-mark"></span>
                   <span class="form-program__control-label">Витамины</span>
                 </label>
