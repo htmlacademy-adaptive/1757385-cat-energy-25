@@ -1,0 +1,12 @@
+.location {
+  padding: 26px 0;
+}
+
+.location__strong-text {
+  @include font-oswald-upper(16px, 20px, #111111);
+}
+
+.location__address {
+  line-height: 20px;
+  font-style: normal;
+}

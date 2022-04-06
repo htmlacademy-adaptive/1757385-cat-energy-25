@@ -1,0 +1,30 @@
+.example {
+  background-color: #eaeaea;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.example__title {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.example__stats-value {
+  @include font-oswald-upper(24px, 1);
+  text-align: center;
+
+  &--summary {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.example__stats-description {
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+
+  &--summary {
+    @include font-oswald-upper(14px, 20px);
+  }
+}

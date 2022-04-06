@@ -1,0 +1,16 @@
+.catalog-refs {
+  margin-bottom: 20px;
+}
+
+.catalog-refs__item {
+  background-color: $basic-grey;
+}
+
+.catalog-refs__item-title {
+  @include font-oswald-upper(24px, 37px);
+}
+
+.catalog-refs__link {
+  @include font-oswald-upper(16px, 1);
+  text-decoration: none;
+}

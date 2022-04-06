@@ -1,0 +1,7 @@
+.additional {
+  margin-bottom: 35px;
+}
+
+.additional__title {
+  @include font-oswald(24px, 1);
+}

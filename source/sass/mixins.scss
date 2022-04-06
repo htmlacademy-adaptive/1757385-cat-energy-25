@@ -1,0 +1,24 @@
+@mixin font-oswald-upper(
+  $size: 14px,
+  $height: 18px,
+  $color: #000000,
+  $font-weight: 400) {
+  font-family: "Oswald", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $font-weight;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin font-oswald(
+  $size: 14px,
+  $height: 18px,
+  $color: #000000,
+  $font-weight: 400) {
+  font-family: "Oswald", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $font-weight;
+  color: $color;
+}

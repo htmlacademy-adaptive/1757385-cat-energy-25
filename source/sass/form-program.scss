@@ -1,0 +1,66 @@
+.form-program {
+  @include font-oswald(16px, 18px, $special-dark-grey);
+}
+
+.form-program__group {
+  border: 0;
+
+  &--border-on {
+    border: 1px solid #e7e7e7;
+  }
+}
+
+.form-program__group-title {
+  position: relative;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+
+  // Test for decoration. Edit when decoration is going to be realized
+  // &::after {
+  //   position: absolute;
+  //   left: 100%;
+  //   top: 0;
+  //   bottom: 0;
+  //   margin-top: auto;
+  //   margin-bottom: auto;
+  //   height: 2px;
+  //   width: 100vw;
+  //   background-color: $basic-green;
+  //   content: "";
+  // }
+}
+
+.form-program__control-label {
+  text-transform: uppercase;
+
+  &--shade-dark {
+    color: $special-dark-grey-2;
+  }
+
+  &--shade-black {
+    color: #000000;
+  }
+}
+
+.form-program__control-input,
+.form-program__control-number,
+.form-program__textarea {
+  font: inherit;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.form-program__submit {
+  padding: 7px;
+  border: 0;
+}
+
+.form-program__endnote {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}

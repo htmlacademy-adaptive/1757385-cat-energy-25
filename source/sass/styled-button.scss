@@ -1,0 +1,11 @@
+.styled-button {
+  @include font-oswald-upper(16px, 20px, #ffffff);
+  text-decoration: none;
+  text-align: center;
+  background-color: $basic-green;
+
+  &--grey {
+    color: $special-dark-grey;
+    background-color: $basic-grey;
+  }
+}
