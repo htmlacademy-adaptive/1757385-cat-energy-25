@@ -1,0 +1,19 @@
+.product-card {
+  padding-top: 19px;
+  padding-bottom: 24px;
+}
+
+.product-card__title {
+  margin-top: 0;
+
+  @include font-oswald-upper(16px, 20px, $special-dark-grey-2);
+}
+
+.product-card__specs-list {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-card__button {
+  padding: 10px;
+}

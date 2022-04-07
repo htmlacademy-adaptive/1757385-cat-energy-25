@@ -1,0 +1,12 @@
+.card-info__title {
+  @include font-oswald-upper(16px, 20px, #111111);
+}
+
+.card-info__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card-info__button {
+  padding: 10px;
+}

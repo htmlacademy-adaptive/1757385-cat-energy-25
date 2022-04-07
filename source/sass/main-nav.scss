@@ -1,0 +1,8 @@
+.main-nav {
+  @include font-oswald-upper(20px, 1, #000000, 500);
+}
+
+.main-nav__link {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,47 @@
+// Here is some sketch for the future intro-block backround.
+// Need to be remastered after realization of adaptive design
+.intro {
+  position: relative;
+  margin-bottom: 20px;
+
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  background: url("../img/bg/intro-background-mobile.jpg") top center / 320px 302px no-repeat;
+  color: #ffffff;
+
+  // Green filter for the background image
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 302px;
+    background-color: rgba(104, 183, 56, 0.85);
+    content: "";
+    z-index: 0;
+  }
+}
+
+.intro__inner {
+  position: relative;
+  height: 440px;
+  padding: 27px 36px 0;
+  z-index: 1;
+  background: url("../img/bg/index-can-mobile.png") bottom center / 280px 270px no-repeat;
+}
+
+.intro__slogan {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.intro__button {
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: $basic-green;
+}

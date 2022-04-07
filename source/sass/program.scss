@@ -1,0 +1,11 @@
+.program__title {
+  margin-top: 27px;
+  margin-bottom: 37px;
+  color: #000000;
+}
+
+.program__text {
+  margin-bottom: 39px;
+
+  @include font-oswald-upper();
+}

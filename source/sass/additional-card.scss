@@ -1,0 +1,17 @@
+.additional-card {
+  padding-top: 13px;
+  padding-bottom: 19px;
+}
+
+.additional-card__title {
+  @include font-oswald-upper(16px, 1, $special-dark-grey-2);
+}
+
+.additional-card__specs-item {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.additional-card__button {
+  padding: 10px;
+}
