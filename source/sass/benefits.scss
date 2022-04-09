@@ -11,19 +11,18 @@
   display: flex;
   flex-direction: column;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
 .benefits__item {
-
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     flex-basis: 50%;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     flex-basis: 25%;
   }
 }

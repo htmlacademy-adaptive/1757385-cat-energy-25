@@ -9,15 +9,15 @@
   padding-bottom: 40px;
   background-color: #eaeaea;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     background-color: transparent;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "header slider"
-    "body slider";
+      "header slider"
+      "body slider";
   }
 }
 

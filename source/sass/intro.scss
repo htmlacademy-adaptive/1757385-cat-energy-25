@@ -9,7 +9,7 @@
   background: url("../img/bg/intro-background-mobile.jpg") top center / 320px 302px no-repeat;
   color: #ffffff;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     background: none;
     color: #000000;
   }
@@ -25,7 +25,7 @@
     content: "";
     z-index: 0;
 
-    @media(min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -42,14 +42,14 @@
   z-index: 1;
   background: url("../img/bg/index-can-mobile.png") bottom 40px center / 280px 270px no-repeat;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     max-width: none;
     text-align: left;
     padding: 27px 87px 0;
     align-items: flex-start;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 55px 80px 0;
   }
 }
@@ -59,7 +59,7 @@
   margin-bottom: 25px;
   color: #ffffff;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     color: #000000;
   }
 }
@@ -76,14 +76,13 @@
   padding: 11px;
   font-size: 14px;
   line-height: 18px;
-  color: inherit;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   background-color: $basic-green;
   color: #ffffff;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-top: 0;
   }
 }
