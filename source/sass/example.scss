@@ -1,12 +1,37 @@
 .example {
-  background-color: #eaeaea;
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "body"
+    "slider";
   padding-top: 25px;
   padding-bottom: 40px;
+  background-color: #eaeaea;
+
+  @media(min-width: $tablet-width) {
+    background-color: transparent;
+  }
+
+  @media(min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header slider"
+    "body slider";
+  }
+}
+
+.example__header {
+  grid-area: header;
 }
 
 .example__title {
   margin-top: 0;
   margin-bottom: 40px;
+}
+
+.example__description {
+  grid-area: body;
 }
 
 .example__stats-value {
@@ -27,4 +52,9 @@
   &--summary {
     @include font-oswald-upper(14px, 20px);
   }
+}
+
+.example__slider {
+  grid-area: slider;
+  justify-self: center;
 }

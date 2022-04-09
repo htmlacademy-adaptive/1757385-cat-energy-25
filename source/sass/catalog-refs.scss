@@ -2,8 +2,34 @@
   margin-bottom: 20px;
 }
 
+.catalog-refs__list {
+  display: flex;
+  flex-direction: column;
+
+  // Здесь мне очень не хватало промежуточного брейкпойнта на 991px
+  @media(min-width: $tablet-width-2) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .catalog-refs__item {
+  margin-bottom: 20px;
+  padding: 20px;
   background-color: $basic-grey;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media(min-width: $tablet-width-2) {
+    flex-basis: calc(50% - 80px);
+    margin-bottom: 0;
+
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+  }
 }
 
 .catalog-refs__item-title {

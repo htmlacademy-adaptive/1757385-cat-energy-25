@@ -6,3 +6,10 @@
   color: inherit;
   text-decoration: none;
 }
+
+.main-nav__toggle {
+
+  @media(min-width: $tablet-width) {
+    display: none;
+  }
+}

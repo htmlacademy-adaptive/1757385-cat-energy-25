@@ -1,5 +1,30 @@
 .location {
-  padding: 26px 0;
+  @media(min-width: $tablet-width-2) {
+    display: grid;
+  }
+}
+
+.location__inner {
+
+  @media(min-width: $tablet-width-2) {
+    grid-area: 1 / 1 / -1 / -1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.location__description {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media(min-width: $tablet-width-2) {
+    width: 405px;
+    padding: 56px 80px;
+    background-color: #ffffff;
+  }
 }
 
 .location__strong-text {
@@ -9,4 +34,28 @@
 .location__address {
   line-height: 20px;
   font-style: normal;
+}
+
+.location__map {
+  position: relative;
+  width: 100%;
+  height: 362px;
+
+  @media(min-width: $tablet-width) {
+    min-height: 400px;
+  }
+
+  @media(min-width: $tablet-width-2) {
+    grid-area: 1 / 1 / -1 / -1;
+    z-index: -1;
+  }
+}
+
+.location__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
