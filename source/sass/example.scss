@@ -1,37 +1,49 @@
 .example {
   position: relative;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "body"
-    "slider";
-  padding-top: 25px;
-  padding-bottom: 40px;
   background-color: #eaeaea;
 
   @media (min-width: $tablet-width) {
     background-color: transparent;
+    background-image: linear-gradient(to top, #eaeaea 42.7%, #ffffff 42.7%);
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "header slider"
-      "body slider";
+    background-image: linear-gradient(to top, #eaeaea 72.1%, #ffffff 72.1%);
   }
 }
 
-.example__header {
-  grid-area: header;
+.example__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.example__info {
+  flex-basis: 50%;
 }
 
 .example__title {
-  margin-top: 0;
+  margin-top: 25px;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .example__description {
-  grid-area: body;
+  @media (min-width: $desktop-width) {
+    max-width: 436px;
+    padding: 70px 0 75px;
+  }
 }
 
 .example__stats-value {
@@ -55,6 +67,18 @@
 }
 
 .example__slider {
-  grid-area: slider;
-  justify-self: center;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
 }

@@ -1,5 +1,13 @@
 .benefits {
   margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .benefits__title {
@@ -8,22 +16,19 @@
 }
 
 .benefits__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-.benefits__item {
-  @media (min-width: $tablet-width) {
-    flex-basis: 50%;
+    grid-template-columns: repeat(2, auto);
+    gap: 37px 153px;
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: 25%;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 80px;
   }
 }
 

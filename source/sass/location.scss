@@ -1,11 +1,11 @@
 .location {
-  @media (min-width: $tablet-width-2) {
+  @media (min-width: $desktop-width) {
     display: grid;
   }
 }
 
 .location__inner {
-  @media (min-width: $tablet-width-2) {
+  @media (min-width: $desktop-width) {
     grid-area: 1 / 1 / -1 / -1;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
   padding-top: 26px;
   padding-bottom: 26px;
 
-  @media (min-width: $tablet-width-2) {
+  @media (min-width: $desktop-width) {
     width: 405px;
     padding: 56px 80px;
     background-color: #ffffff;
@@ -44,7 +44,7 @@
     min-height: 400px;
   }
 
-  @media (min-width: $tablet-width-2) {
+  @media (min-width: $desktop-width) {
     grid-area: 1 / 1 / -1 / -1;
     z-index: -1;
   }
