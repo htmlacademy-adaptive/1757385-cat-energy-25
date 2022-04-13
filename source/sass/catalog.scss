@@ -1,5 +1,37 @@
+.catalog {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
+}
+
 .catalog__title {
   margin-top: 27px;
   margin-bottom: 37px;
   color: #000000;
+}
+
+.catalog__list {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
 }

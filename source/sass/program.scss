@@ -1,3 +1,10 @@
+.program {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding-left: 40px;
+    padding-right: 37px;
+  }
+}
+
 .program__title {
   margin-top: 27px;
   margin-bottom: 37px;

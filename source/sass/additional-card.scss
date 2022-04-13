@@ -1,6 +1,13 @@
 .additional-card {
+  display: flex;
+  flex-direction: column;
   padding-top: 13px;
   padding-bottom: 19px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .additional-card__title {
