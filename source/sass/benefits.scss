@@ -1,10 +1,35 @@
 .benefits {
   margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .benefits__title {
   margin-top: 0;
   margin-bottom: 40px;
+}
+
+.benefits__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, auto);
+    gap: 37px 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, auto);
+    column-gap: 80px;
+  }
 }
 
 .benefits__item-icon {

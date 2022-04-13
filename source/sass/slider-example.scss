@@ -1,3 +1,9 @@
+.slider-example__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .slider-example__button {
   @include font-oswald-upper(16px, 20px);
 }

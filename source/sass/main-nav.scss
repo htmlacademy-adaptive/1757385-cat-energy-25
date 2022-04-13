@@ -2,7 +2,19 @@
   @include font-oswald-upper(20px, 1, #000000, 500);
 }
 
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .main-nav__link {
   color: inherit;
   text-decoration: none;
+}
+
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
