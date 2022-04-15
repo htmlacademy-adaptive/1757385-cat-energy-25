@@ -1,27 +1,52 @@
 .promo {
-  position: relative;
-  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 289px;
-  background: url("../img/bg/promo-background-mobile.jpg") top center / 279px 289px no-repeat;
+  background: url("../img/bg/promo-background-mobile.jpg") center / cover no-repeat;
 
-  // Green filter for the background image
-  &::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 289px;
-    background-color: rgba(104, 183, 56, 0.85);
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+  }
+
+  &::before {
+    display: block;
+    width: 78px;
+    height: 80px;
+    margin-bottom: 48px;
+    margin-top: auto;
+    background: url("../img/bg/icon-gift.svg") center / cover no-repeat;
     content: "";
-    z-index: 0;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      margin-bottom: 0;
+      margin-left: 77px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      width: 80px;
+      height: 82px;
+    }
   }
 }
 
 .promo__description {
-  position: relative;
+  max-width: 161px;
+  margin: 0 auto 43px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-align: center;
-  z-index: 1;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 0;
+    margin-right: 124px;
+    text-align: left;
+  }
 }

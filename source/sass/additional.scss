@@ -1,7 +1,5 @@
-.additional {
-  margin-bottom: 35px;
-}
-
-.additional__title {
-  @include font-oswald(24px, 1);
+.additional__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }

@@ -1,4 +1,12 @@
 .location {
+  &--bg-grey {
+    background-color: $basic-grey;
+
+    @media (min-width: $desktop-width) {
+      background-color: transparent;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
   }
