@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <!-- Main header -->
-    <header class="main-header">
+    <header class="main-header main-nav--nojs">
       <div class="main-header__inner container">
         <!-- Logo -->
         <div class="main-header__logo-wrapper">
@@ -16,9 +16,14 @@
             <img class="main-header__logo-image" src="img/logo/logo-mobile.svg" width="191" height="38" alt="Магазин правильного питания для котов 'Кэт Энерджи'">
           </a>
         </div>
+
         <!-- Main navigation -->
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="main-nav__toggle-icon-E"></span>
+            <span class="main-nav__toggle-icon-X"></span>
+          </button>
           <div class="main-nav__body">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -38,7 +43,7 @@
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
 
@@ -62,14 +67,14 @@
         <div class="container">
           <h2 class="visually-hidden">Продукты для Вашей программы питания.</h2>
           <ul class="catalog-refs__list">
-            <li class="catalog-refs__item">
+            <li class="catalog-refs__item catalog-refs__item--slim">
               <h3 class="catalog-refs__item-title">Похудение</h3>
               <p class="catalog-refs__item-text">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
               <a class="catalog-refs__link" href="#">Каталог slim</a>
             </li>
-            <li class="catalog-refs__item">
+            <li class="catalog-refs__item catalog-refs__item--pro">
               <h3 class="catalog-refs__item-title">Набор массы</h3>
               <p class="catalog-refs__item-text">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -172,20 +177,22 @@
               <p class="example__text">
                 Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
               </p>
-              <dl class="example__stats-list">
-                <div class="example__stats-item">
-                  <dt class="example__stats-value">5 кг</dt>
-                  <dd class="example__stats-description">снижение веса</dd>
-                </div>
-                <div class="example__stats-item">
-                  <dt class="example__stats-value">60 дней</dt>
-                  <dd class="example__stats-description">затрачено времени</dd>
-                </div>
-                <div class="example__stats-item example__stats-item--summary">
-                  <dt class="example__stats-value example__stats-value--summary">15 000 руб</dt>
-                  <dd class="example__stats-description example__stats-description--summary">Затраты на питание</dd>
-                </div>
-              </dl>
+              <div class="example__stats">
+                <dl class="example__stats-list">
+                  <div class="example__stats-item">
+                    <dt class="example__stats-value">5 кг</dt>
+                    <dd class="example__stats-description">снижение веса</dd>
+                  </div>
+                  <div class="example__stats-item">
+                    <dt class="example__stats-value">60 дней</dt>
+                    <dd class="example__stats-description">затрачено времени</dd>
+                  </div>
+                </dl>
+                <p class="example__cost">
+                  <span class="example__cost-title">Затраты на питание:</span>
+                  <b class="example__cost-value">15 000 руб.</b>
+                </p>
+              </div>
             </div>
           </div>
           <div class="example__slider slider-example">
@@ -220,7 +227,8 @@
           <h2 class="visually-hidden">Где находится наш офис.</h2>
           <div class="location__description">
             <strong class="location__strong-text">Приглашаем к сотрудничеству дилеров!</strong>
-            <address class="location__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <address class="location__address">
+              ул. Большая Конюшенная, д. 19/8 <span class="location__city">Санкт-Петербург</span></address>
           </div>
         </div>
         <div class="location__map">
@@ -231,8 +239,8 @@
       <div class="main-footer__bottom">
         <div class="main-footer__bottom-inner container">
           <!-- Footer logo -->
-          <a class="main-footer__logo">
-            <img src="img/logo/footer-logo.svg" width="128" height="24"  alt="Кэт Энерджи">
+          <a class="main-footer__logo-link">
+            <img class="main-footer__logo-image" src="img/logo/footer-logo.svg" width="128" height="24"  alt="Кэт Энерджи">
           </a>
 
           <!-- Social list -->
@@ -240,13 +248,28 @@
             <h2 class="visually-hidden">Проект "Кэт Энерджи" в социальных сетях</h2>
             <ul class="footer-social__list">
               <li class="footer-social__item">
-                <a class="footer-social__link footer-social__link--vk" href="https://vk.com/htmlacademy" target="_blank"><span class="visually-hidden">Наша страничка в ВКонтакте</span></a>
+                <a class="footer-social__link" href="https://vk.com/htmlacademy" target="_blank">
+                  <span class="visually-hidden">Наша страничка в ВКонтакте</span>
+                  <svg class="footer-social__icon" width="27" height="17" viewBox="0 0 27 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 2.3C0 1.5.5 1 1.5 1h4c.3 0 .5.1.5.4l1.4 3.2A39.8 39.8 0 0 0 9.8 8s.2 0 .2-.2l.1-.3V3.2c0-.3 0-.5-.2-.6l-.8-.2c-.3 0-.5-.3-.5-.6v-.1C9 .6 10.1 0 11.8 0h1.5c.7 0 1.3.2 1.7.5.4.3.7.8.7 1.5v5.7l.3.1c.3 0 .5-.1.7-.4A17.7 17.7 0 0 0 20 2l.6-.7.8-.4H25.9c.4 0 .7.2.8.5l.2.3a2.4 2.4 0 0 1 0 .6v.1c0 .7-.4 1.5-.9 2.2-.5.8-1.1 1.7-2 2.6a27.6 27.6 0 0 0-1.6 2.3c0 .1 0 .3.2.5l3.9 4.6c.2.3.3.5.3.9s-.2.7-.5 1a2 2 0 0 1-1.1.3h-4.6l-.1.1c-.4 0-.8-.2-1.1-.5a241.3 241.3 0 0 1-3-3.3 38.5 38.5 0 0 0-.4 2.3l-.1.4c-.2.6-.6 1-1.1 1h-3c-1.5 0-3-.6-4.4-1.8-1.5-1.3-2.8-3-4-5A47.5 47.5 0 0 1 0 2.3ZM16 9c-.4 0-.7-.1-1-.3a.9.9 0 0 1-.5-.8V2c0-.3 0-.6-.2-.7-.2-.2-.5-.2-1-.2h-1.5c-.7 0-1.3.1-1.7.4.8.3 1.2 1 1.2 1.7v4.4c0 .4-.2.8-.6 1-.3.3-.6.5-1 .5-.6 0-1-.3-1.3-.8-1.3-2-2.4-3.8-3-5.6L5 2.1H1.2v.7l.6 1.4a33 33 0 0 0 4.8 8.6c1.8 2 3.5 3.1 5.2 3.1h2.9l.1-.4v-.3l.6-2.2.3-.6c.2-.2.5-.3.7-.3.5 0 .9.3 1.3.8l2.3 2.7c.2.2.3.3.5.3h4.4c.5 0 .8-.1.8-.4l-.1-.2-3.9-4.6c-.3-.3-.4-.7-.4-1 0-.5.1-.9.4-1.3L23 6.8l1.8-2.2c.5-.7.8-1.3 1-1.9V2.1h-4.2c-.3 0-.5.2-.6.4l-.2.5c-.4 1.1-1.6 3-3.5 5.3-.4.4-.8.6-1.3.6Z"/>
+                  </svg>
+                </a>
               </li>
               <li class="footer-social__item">
-                <a class="footer-social__link footer-social__link--youtube" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g" target="_blank"><span class="visually-hidden">Наши видео на Youtube</span></a>
+                <a class="footer-social__link" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g" target="_blank">
+                  <span class="visually-hidden">Наши видео на Youtube</span>
+                  <svg class="footer-social__icon" width="24" height="19" viewBox="0 0 24 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m15.9 8.8-5.3-3.5a.7.7 0 0 0-1 .5v7a.7.7 0 0 0 1 .6L16 9.9a.7.7 0 0 0 0-1.1Zm-5 2.8V7.1l3.4 2.2-3.4 2.3ZM23.4 3a2.4 2.4 0 0 0-1.5-1.6C18.2 0 12.3 0 12 0c-.3 0-6.2 0-10 1.4A2.4 2.4 0 0 0 .7 3C.3 4.1 0 6 0 9.3s.3 5.3.6 6.3a2.4 2.4 0 0 0 1.5 1.7c3.7 1.4 9.6 1.4 9.9 1.4.8 0 6.4 0 10-1.4a2.4 2.4 0 0 0 1.4-1.7c.3-1 .6-3 .6-6.3 0-3.2-.3-5.2-.6-6.3ZM22 15.3a1 1 0 0 1-.6.7C18 17.4 12 17.4 12 17.4c0 0-6 0-9.5-1.4a1 1 0 0 1-.6-.7c-.3-1-.6-2.8-.6-6 0-3 .3-5 .6-6a1 1 0 0 1 .6-.7C6 1.3 12 1.3 12 1.3c0 0 6 0 9.5 1.3a1 1 0 0 1 .6.8c.3 1 .6 2.8.6 6 0 3-.3 4.9-.6 6Z"/>
+                  </svg>
+                </a>
               </li>
               <li class="footer-social__item">
-                <a class="footer-social__link footer-social__link--telegram" href="https://telegram.me/htmlacademy" target="_blank"><span class="visually-hidden">Наш телеграм-канал</span></a>
+                <a class="footer-social__link" href="https://telegram.me/htmlacademy" target="_blank">
+                  <span class="visually-hidden">Наш телеграм-канал</span>
+                  <svg class="footer-social__icon" width="20" height="18" viewBox="0 0 20 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="m19.5.2.2.6L17 16.5a.7.7 0 0 1-1 .5l-8-5.3a.7.7 0 0 1 0-1l2.5-3.2-4.3 2.9h-.7L.4 7.8a.7.7 0 0 1 0-1.2L18.8 0c.2 0 .5 0 .7.2ZM2.3 7.3 6 9.1l7.5-5a.7.7 0 0 1 .9 1l-4.8 6 6.4 4.2 2.3-13.6L2.3 7.3Z"/>
+                  </svg>
+                </a>
               </li>
             </ul>
           </section>
@@ -263,5 +286,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

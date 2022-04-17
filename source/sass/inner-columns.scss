@@ -16,12 +16,11 @@
 }
 
 .inner-columns__content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   @media (min-width: $desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 20.1%;
+    gap: 80px;
   }
 }
 
@@ -33,8 +32,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: calc(896 / 1220 * 100%);
-    margin-right: calc(80 / 1220 * 100%);
     margin-bottom: 0;
   }
 }
@@ -47,7 +44,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: calc(245 / 1220 * 100%);
     margin-bottom: 0;
   }
 }

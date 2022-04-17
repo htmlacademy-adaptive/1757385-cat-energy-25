@@ -10,5 +10,47 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+}
+
+.main-footer__logo-link {
+  width: 100%;
+  text-align: center;
+  padding: 39px 0 32px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: 0;
+    width: auto;
+  }
+}
+
+.main-footer__logo-image {
+  vertical-align: middle;
+}
+
+.main-footer__social {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border: 0;
+    max-width: 350px;
+  }
+}
+
+.main-footer__copyright {
+  width: 100%;
+  padding: 22px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: auto;
   }
 }
