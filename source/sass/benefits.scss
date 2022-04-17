@@ -3,6 +3,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 90px;
+    counter-reset: benefits-counter;
   }
 
   @media (min-width: $desktop-width) {
@@ -13,17 +14,22 @@
 .benefits__title {
   margin-top: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .benefits__list {
   display: grid;
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, auto);
-    gap: 37px 153px;
+    grid-template-columns: repeat(2, 32%);
+    gap: 40px 150px;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,8 +38,58 @@
   }
 }
 
+.benefits__item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 80px auto;
+    grid-template-rows: 80px auto;
+    gap: 31px;
+    align-items: start;
+    padding: 40px 0 0;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      justify-self: end;
+
+      @include font-oswald(280px, 1, $basic-grey);
+      counter-increment: benefits-counter;
+      content: counter(benefits-counter);
+      z-index: -1;
+      margin-top: -38px; //Убирает пустое пространоство над текстом
+    }
+  }
+}
+
 .benefits__item-icon {
-  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60px;
+  width: 60px;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.benefits__item-text {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    max-width: 250px;
+    margin-bottom: 40px;
+  }
 }

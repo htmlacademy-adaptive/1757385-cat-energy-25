@@ -30,13 +30,99 @@
 .catalog-refs__item {
   padding: 20px;
   background-color: $basic-grey;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    padding: 53px 316px 53px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 52px;
+  }
+
+  &--slim {
+    background-image: url("../img/bg/cat-bg-slim.svg");
+    background-position: 22px 21px;
+    background-size: 50px 53px;
+
+    @media (min-width: $tablet-width) {
+      background-position: right 62px center;
+      background-size: 200px 211px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 52px 41px;
+      background-size: 100px 106px;
+    }
+  }
+
+  &--pro {
+    background-image: url("../img/bg/cat-bg-pro.svg");
+    background-position: 13px 24px;
+    background-size: 67px 50px;
+
+    @media (min-width: $tablet-width) {
+      background-position: right 28px center;
+      background-size: 268px 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 33px 47px;
+      background-size: 134px 100px;
+    }
+  }
 }
 
 .catalog-refs__item-title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 71px;
+
   @include font-oswald-upper(24px, 37px);
+
+  @media (min-width: $tablet-width) {
+    margin: 24px 0;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 214px;
+    margin-top: 22px;
+    margin-bottom: 73px;
+  }
+}
+
+.catalog-refs__item-text {
+  margin-top: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+    color: #000000;
+    border: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .catalog-refs__link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 4px 47px 4px 0;
+
   @include font-oswald-upper(16px, 1);
   text-decoration: none;
+  background: url("../img/index/arrow-right.svg") center right 8px / 24px 12px no-repeat;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    padding-right: 57px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

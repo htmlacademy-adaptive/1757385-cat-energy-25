@@ -1,18 +1,31 @@
+.main-header {
+  position: relative;
+}
+
 // Main header
 .main-header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 53px;
-    padding-bottom: 53px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
+}
+
+.main-nav--nojs .main-header__inner {
+  flex-direction: column;
+}
+
+.main-nav--nojs .main-header__logo-wrapper {
+  align-self: flex-start;
+  margin-bottom: 17px;
 }

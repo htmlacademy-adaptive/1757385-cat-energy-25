@@ -1,9 +1,110 @@
+.slider-example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .slider-example__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.slider-example__controls {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    margin-top: auto;
+  }
 }
 
 .slider-example__button {
+  border: 0;
+  padding: 4px 6px;
+
   @include font-oswald-upper(16px, 20px);
+
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px 12px;
+
+    &::after {
+      position: absolute;
+      left: 12px;
+      bottom: 5px;
+      width: calc(100% - 24px);
+      border-top: 1px dotted rgba(0, 0, 0, 0.24);
+      content: "";
+    }
+  }
+}
+
+.slider-example__bar {
+  position: relative;
+  width: 85px;
+  height: 14px;
+  margin: auto 13px;
+  border: 1px solid $special-grey;
+  border-radius: 6px;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: #dcdcdc;
+  }
+}
+
+.slider-example__pointer {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  left: 6px;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 42%;
+  background-color: $basic-green;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &--right {
+    right: 6px;
+    left: auto;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $basic-green;
+      content: "";
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    right: auto;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    background-color: #ffffff;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
 }
