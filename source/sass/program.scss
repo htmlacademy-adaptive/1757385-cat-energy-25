@@ -9,10 +9,25 @@
   margin-top: 27px;
   margin-bottom: 37px;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .program__text {
   margin-bottom: 39px;
 
   @include font-oswald-upper();
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    max-width: 350px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

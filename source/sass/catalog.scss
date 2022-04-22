@@ -1,5 +1,6 @@
 .catalog {
   margin-bottom: 25px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 68px;
@@ -12,13 +13,17 @@
 
 .catalog__title {
   margin-top: 27px;
-  margin-bottom: 37px;
+  margin-bottom: 41px;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .catalog__list {
   display: grid;
-  justify-content: center;
+  justify-content: stretch;
   justify-items: center;
   margin: 0;
   padding: 0;
@@ -33,5 +38,45 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     gap: 63px 80px;
+  }
+}
+
+.catalog__item {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -8px;
+    left: -10vw;
+    width: 110vw;
+    height: 1px;
+    background-color: $special-grey-2;
+    content: "";
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:first-child::before {
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    width: 100vw;
+    height: 1px;
+    background-color: $special-grey-2;
+    content: "";
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }

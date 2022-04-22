@@ -21,11 +21,15 @@
   }
 }
 
-.main-nav--nojs .main-header__inner {
-  flex-direction: column;
+.no-js .main-header__inner {
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
 }
 
-.main-nav--nojs .main-header__logo-wrapper {
-  align-self: flex-start;
-  margin-bottom: 17px;
+.no-js .main-header__logo-wrapper {
+  @media (max-width: $tablet-width) {
+    align-self: flex-start;
+    margin-bottom: 17px;
+  }
 }

@@ -3,3 +3,11 @@
   padding: 0;
   list-style-type: none;
 }
+
+.additional__item {
+  border-bottom: 1px solid $special-grey;
+
+  &:first-child {
+    border-top: 1px solid $special-grey;
+  }
+}

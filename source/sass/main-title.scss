@@ -1,3 +1,7 @@
 .main-title {
   @include font-oswald(36px, 1);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
 }
