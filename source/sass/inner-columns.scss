@@ -8,8 +8,6 @@
   margin-bottom: 36px;
   margin-top: 0;
 
-  @include font-oswald(24px, 1);
-
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
   }

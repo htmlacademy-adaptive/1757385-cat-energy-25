@@ -1,24 +1,65 @@
 .additional-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding-top: 13px;
   padding-bottom: 19px;
 
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 225px;
+    gap: 25px;
+    padding: 26px 38px 28px;
+  }
+
   @media (min-width: $desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: 1fr 290px 244px;
+    gap: 38px;
+    padding: 15px 0 17px;
+    align-items: center;
   }
 }
 
 .additional-card__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+
   @include font-oswald-upper(16px, 1, $special-dark-grey-2);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
 }
 
-.additional-card__specs-item {
+.additional-card__specs-list {
+  margin-bottom: 15px;
   font-size: 14px;
   line-height: 1;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additional-card__specs-title {
+  padding: 0;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    text-align: right;
+  }
+}
+
+.additional-card__specs-value {
+  padding: 0;
+  text-align: right;
+  width: 80px;
 }
 
 .additional-card__button {
   padding: 10px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
 }

@@ -13,7 +13,12 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: #ffffff;
+  }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      color: #ffffff;
+    }
   }
 }
 
@@ -82,7 +87,9 @@
       background-color: $basic-green;
       content: "";
     }
+  }
 
+  &--index::after {
     @media (min-width: $desktop-width) {
       background-color: #ffffff;
     }
@@ -172,15 +179,17 @@
   transition-delay: 0.5s;
 }
 
-.main-nav--nojs .main-nav__toggle {
+.no-js .main-nav__toggle {
   display: none;
 }
 
-.main-nav--nojs .main-nav__body {
+.no-js .main-nav__body {
   position: static;
   transform: translateX(0);
 }
 
-.main-nav--nojs .main-nav {
-  width: 100%;
+.no-js .main-nav {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }

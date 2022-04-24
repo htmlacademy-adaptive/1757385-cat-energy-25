@@ -7,6 +7,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -19,19 +20,22 @@
     width: 78px;
     height: 80px;
     margin-bottom: 48px;
-    margin-top: auto;
+    margin-top: 58px;
     background: url("../img/bg/icon-gift.svg") center / cover no-repeat;
     content: "";
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-      margin-bottom: 0;
+      margin: 0;
       margin-left: 77px;
     }
 
     @media (min-width: $tablet-width) {
-      margin-top: 0;
       width: 80px;
       height: 82px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 55px;
     }
   }
 }
@@ -46,7 +50,12 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     margin: 0;
-    margin-right: 124px;
     text-align: left;
+  }
+
+  &:last-of-type {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      margin-right: 124px;
+    }
   }
 }
