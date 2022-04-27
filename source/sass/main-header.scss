@@ -27,9 +27,19 @@
   }
 }
 
-.no-js .main-header__logo-wrapper {
-  @media (max-width: $tablet-width) {
-    align-self: flex-start;
-    margin-bottom: 17px;
+.main-header__logo-link {
+  display: inline-block;
+}
+
+.main-header__logo-image {
+  width: 191px;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
   }
 }

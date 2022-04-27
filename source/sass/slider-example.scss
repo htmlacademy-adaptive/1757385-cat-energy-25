@@ -15,6 +15,24 @@
   }
 }
 
+.slider-example__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider-example__item-image {
+  height: 232px;
+  width: auto;
+
+  @media (min-width: $tablet-width) {
+    height: 511px;
+    width: auto;
+  }
+}
+
 .slider-example__controls {
   display: flex;
   justify-content: center;

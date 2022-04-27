@@ -9,15 +9,23 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
+    grid-template-columns: 1fr 30px 1220px 30px 1fr;
+    grid-template-rows: 95px 1fr auto;
   }
 }
 
 .location__inner {
   @media (min-width: $desktop-width) {
-    grid-area: 1 / 1 / -1 / -1;
-    display: flex;
-    align-items: center;
-    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    max-width: none;
+    z-index: 1;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: start;
   }
 }
 
@@ -35,9 +43,11 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 565px;
     padding: 56px 80px;
     background-color: #ffffff;
     gap: 70px;
+    cursor: default;
   }
 }
 
@@ -83,12 +93,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: 1 / 1 / -1 / -1;
-    z-index: -1;
+    z-index: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
   }
 }
 
-.location__image {
+.location__map-image {
   position: absolute;
   top: 0;
   left: 0;
