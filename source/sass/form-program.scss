@@ -40,6 +40,7 @@
       content: "";
       border-top: 1px solid #d9d9d9;
       border-bottom: 1px solid #d9d9d9;
+      z-index: -1;
 
       @media (min-width: $tablet-width) {
         display: none;
@@ -167,11 +168,15 @@
 
 .form-program__text-input {
   &--with-icon {
-    padding-right: 45px;
+    padding-right: 40px;
 
     @media (min-width: $desktop-width) {
       padding-bottom: 8px;
     }
+  }
+
+  &::-webkit-input-placeholder {
+    color: $special-dark-grey;
   }
 }
 

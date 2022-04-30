@@ -3,16 +3,44 @@
   flex-direction: column;
   align-items: center;
   min-height: 289px;
-  background: url("../img/bg/promo-background-mobile.jpg") center / cover no-repeat;
+  width: 100%;
+  height: auto;
+  padding: 27px;
+  background-color: $basic-green;
+  background-image: url("../img/bg/promo-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/promo-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 26vw;
+    padding: 30px;
+    background-image: url("../img/bg/promo-tablet.jpg");
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/bg/promo-tablet@2x.jpg");
   }
 
   @media (min-width: $desktop-width) {
     justify-content: center;
+    min-height: auto;
+    padding: 20px;
+    background-image: url("../img/bg/promo-desktop.jpg");
+  }
+
+  @media (min-width: $desktop-width)  and (min-resolution: 2dppx) {
+    background-image: url("../img/bg/promo-desktop@2x.jpg");
   }
 
   &::before {
@@ -20,13 +48,13 @@
     width: 78px;
     height: 80px;
     margin-bottom: 48px;
-    margin-top: 58px;
+    margin-top: 31px;
     background: url("../img/bg/icon-gift.svg") center / cover no-repeat;
     content: "";
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {
       margin: 0;
-      margin-left: 77px;
+      margin-right: 34.5vw;
     }
 
     @media (min-width: $tablet-width) {
@@ -35,14 +63,14 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 55px;
+      margin-top: 35px;
     }
   }
 }
 
 .promo__description {
   max-width: 161px;
-  margin: 0 auto 43px;
+  margin: 0 auto 16px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
@@ -53,9 +81,7 @@
     text-align: left;
   }
 
-  &:last-of-type {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-      margin-right: 124px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
   }
 }
