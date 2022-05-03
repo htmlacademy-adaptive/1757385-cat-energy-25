@@ -243,13 +243,13 @@
           </div>
           <div class="example__slider slider-example">
             <ul class="slider-example__list">
-              <li class="slider-example__item slider-example__item--current">
+              <li class="slider-example__item slider-example__item--before slider-example__item--current">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/slider/before-tablet.png 1x, img/slider/before-tablet@2x.png 2x">
                   <img class="slider-example__item-image" src="img/slider/before-mobile.png" srcset="img/slider/before-mobile@2x.png 2x" width="280" height="232" alt="Форма кота до диеты.">
                 </picture>
               </li>
-              <li class="slider-example__item">
+              <li class="slider-example__item slider-example__item--after">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/slider/after-tablet.png 1x, img/slider/after-tablet@2x.png 2x">
                   <img class="slider-example__item-image" src="img/slider/after-mobile.png" srcset="img/slider/after-mobile@2x.png 2x" width="243" height="232" alt="Форма кота после диеты.">
@@ -258,13 +258,13 @@
             </ul>
 
             <div class="slider-example__controls">
-              <button class="slider-example__button" type="button">Было</button>
+              <button class="slider-example__button" id="button-before" type="button">Было</button>
 
               <div class="slider-example__bar">
-                <span class="slider-example__pointer" aria-label="Потяните за ползунок, чтобы изменить вид на 'До' или 'После'." aria-role="range"></span>
+                <span class="slider-example__pointer" aria-label="Потяните за ползунок, чтобы изменить вид на 'До' или 'После'." aria-role="range" tabindex="0"></span>
               </div>
 
-              <button class="slider-example__button" type="button">Стало</button>
+              <button class="slider-example__button" id="button-after" type="button">Стало</button>
             </div>
           </div>
         </div>

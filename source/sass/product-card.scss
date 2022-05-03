@@ -24,6 +24,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 
   @media (min-width: $tablet-width) {
     align-items: flex-end;
@@ -38,8 +39,11 @@
 }
 
 .product-card__image {
+  display: block;   //to all img
+  max-width: 100%;
+  height: auto;
   position: relative;
-  top: 11px;
+  // top: 11px;
   object-fit: contain;
 
   @media (min-width: $tablet-width) {

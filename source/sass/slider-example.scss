@@ -2,9 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 280px;
+  align-self: stretch;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 592px;
+  }
 }
 
 .slider-example__list {
+  position: relative;
+  width: 280px;
+  height: 232px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -12,24 +24,81 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
+    width: 592px;
+    height: 511px;
   }
 }
 
 .slider-example__item {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 232px;
+  user-select: none;
+  pointer-events: none;
+  text-align: end;
+  opacity: 0;
+  animation-name: fade-inverse;
+  animation-duration: 0.5s;
+
+  @media (min-width: $tablet-width) {
+    opacity: 1;
+    width: 592px;
+    height: 511px;
+    animation-name: none;
+  }
+
+  &--before {
+    @media (min-width: $tablet-width) {
+      clip-path: inset(0 calc(100% - var(--slider-value, 50%)) 0 0);
+    }
+  }
+
+  &--after {
+    @media (min-width: $tablet-width) {
+      clip-path: inset(0 0 0 var(--slider-value, 50%));
+    }
+  }
 
   &--current {
-    display: block;
+    opacity: 1;
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+    @media (min-width: $tablet-width) {
+      animation-name: none;
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-inverse {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 
 .slider-example__item-image {
   height: 232px;
-  width: auto;
 
   @media (min-width: $tablet-width) {
-    height: 511px;
     width: auto;
+    height: 511px;
+    object-fit: contain;
   }
 }
 
@@ -45,6 +114,7 @@
 .slider-example__button {
   border: 0;
   padding: 4px 6px;
+  user-select: none;
 
   @include font-oswald-upper(16px, 20px);
 
@@ -94,9 +164,9 @@
   width: 42%;
   background-color: $basic-green;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: default;
 
-  &--right {
+  &--after {
     right: 6px;
     left: auto;
   }
@@ -117,12 +187,13 @@
 
   @media (min-width: $tablet-width) {
     right: auto;
-    left: 50%;
+    left: -13px;
     width: 34px;
     height: 34px;
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     background-color: #ffffff;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    cursor: pointer;
   }
 }
