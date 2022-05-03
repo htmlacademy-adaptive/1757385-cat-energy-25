@@ -200,8 +200,6 @@
 
 
 .example__slider {
-  flex-basis: 50%;
-
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
@@ -209,6 +207,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    flex-basis: 48.5%;
     margin-bottom: 0;
   }
 }

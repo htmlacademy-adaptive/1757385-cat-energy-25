@@ -12,6 +12,10 @@
   color: $special-dark-grey;
   background-color: #ffffff;
 
+  &--scroll-lock {
+    overflow: hidden;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
