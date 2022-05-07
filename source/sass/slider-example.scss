@@ -2,9 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   width: 280px;
-  align-self: stretch;
   margin-left: auto;
   margin-right: auto;
 
@@ -20,7 +18,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
@@ -97,16 +95,24 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-    height: 511px;
+    height: 500px;
     object-fit: contain;
+  }
+}
+
+.slider-example__item--after .slider-example__item-image {
+  @media (min-width: $tablet-width) {
+    height: 511px;
   }
 }
 
 .slider-example__controls {
   display: flex;
   justify-content: center;
+  width: 100%;
 
   @media (min-width: $desktop-width) {
+    width: 592px;
     margin-top: auto;
   }
 }
@@ -132,15 +138,30 @@
       left: 12px;
       bottom: 5px;
       width: calc(100% - 24px);
-      border-top: 1px dotted rgba(0, 0, 0, 0.24);
+      border-top: 1px dotted rgba($color: #000000, $alpha: 0.24);
       content: "";
+    }
+  }
+
+  &:hover::after {
+    @media (min-width: $tablet-width) {
+      transition: border-top 0.4s ease;
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+
+  &:active::after {
+    @media (min-width: $tablet-width) {
+      transition: none;
+      border: none;
     }
   }
 }
 
 .slider-example__bar {
   position: relative;
-  width: 85px;
+  flex-basis: 85px;
+  flex-shrink: 0;
   height: 14px;
   margin: auto 13px;
   border: 1px solid $special-grey;
@@ -148,7 +169,7 @@
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    width: 426px;
+    flex-basis: 426px;
     height: 6px;
     background-color: #dcdcdc;
   }
@@ -157,18 +178,17 @@
 .slider-example__pointer {
   position: absolute;
   top: 50%;
-  right: auto;
-  left: 6px;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-100%, -50%);
   height: 6px;
-  width: 42%;
+  width: 43%;
   background-color: $basic-green;
   border-radius: 6px;
   cursor: default;
+  transition: transform 0.3s ease;
 
   &--after {
-    right: 6px;
-    left: auto;
+    transform: translate(0, -50%);
   }
 
   &::before {
@@ -186,7 +206,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    right: auto;
+    transition: none;
+    transform: translateY(-50%);
     left: -13px;
     width: 34px;
     height: 34px;
@@ -195,5 +216,20 @@
     background-color: #ffffff;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
     cursor: pointer;
+  }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      transition: filter 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      transition: none;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      border: 1px solid $basic-green;
+    }
   }
 }

@@ -5,9 +5,17 @@
 }
 
 .additional__item {
-  border-bottom: 1px solid $special-grey;
+  border-style: solid;
+  border-color: $special-grey;
+  border-width: 0;
+  border-bottom-width: 1px;
 
   &:first-child {
-    border-top: 1px solid $special-grey;
+    border-top-width: 1px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    border-right-width: 1px;
+    border-left-width: 1px;
   }
 }

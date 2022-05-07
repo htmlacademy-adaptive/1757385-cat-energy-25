@@ -11,16 +11,19 @@
   color: #000000;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    margin-top: 24px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 56px;
+    margin-top: 16px;
+    margin-bottom: 58px;
   }
 }
 
 .program__text {
   margin-bottom: 39px;
+  max-width: 80%;
 
   @include font-oswald-upper();
 
@@ -29,5 +32,9 @@
     max-width: 350px;
     font-size: 20px;
     line-height: 1.5;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
   }
 }

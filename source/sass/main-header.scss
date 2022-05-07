@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  padding-bottom: 17px;
+  padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     padding-top: 24px;
@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 50px;
+    padding-top: 53px;
     padding-bottom: 50px;
   }
 }
@@ -29,6 +29,16 @@
 
 .main-header__logo-link {
   display: inline-block;
+
+  &[href]:hover {
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    transition: none;
+    opacity: 0.6;
+  }
 }
 
 .main-header__logo-image {
