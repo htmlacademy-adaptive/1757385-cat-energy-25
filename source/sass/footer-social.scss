@@ -6,6 +6,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 25px;
+  }
 }
 
 .footer-social__item {
@@ -17,13 +21,17 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  // text-align: center;
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: $special-grey-3;
-}
+  fill: $special-grey-3;
 
-.footer-social__icon {
-  // vertical-align: middle;
+  &:hover {
+    transition: fill 0.3s ease;
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

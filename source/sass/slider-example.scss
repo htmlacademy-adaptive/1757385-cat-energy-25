@@ -2,42 +2,117 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 592px;
+  }
 }
 
 .slider-example__list {
+  position: relative;
+  width: 280px;
+  height: 232px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
+    width: 592px;
+    height: 511px;
   }
 }
 
 .slider-example__item {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 232px;
+  user-select: none;
+  pointer-events: none;
+  text-align: end;
+  opacity: 0;
+  animation-name: fade-inverse;
+  animation-duration: 0.5s;
+
+  @media (min-width: $tablet-width) {
+    opacity: 1;
+    width: 592px;
+    height: 511px;
+    animation-name: none;
+  }
+
+  &--before {
+    @media (min-width: $tablet-width) {
+      clip-path: inset(0 calc(100% - var(--slider-value, 50%)) 0 0);
+    }
+  }
+
+  &--after {
+    @media (min-width: $tablet-width) {
+      clip-path: inset(0 0 0 var(--slider-value, 50%));
+    }
+  }
 
   &--current {
-    display: block;
+    opacity: 1;
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+    @media (min-width: $tablet-width) {
+      animation-name: none;
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-inverse {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 
 .slider-example__item-image {
   height: 232px;
-  width: auto;
 
   @media (min-width: $tablet-width) {
-    height: 511px;
     width: auto;
+    height: 500px;
+    object-fit: contain;
+  }
+}
+
+.slider-example__item--after .slider-example__item-image {
+  @media (min-width: $tablet-width) {
+    height: 511px;
   }
 }
 
 .slider-example__controls {
   display: flex;
   justify-content: center;
+  width: 100%;
 
   @media (min-width: $desktop-width) {
+    width: 592px;
     margin-top: auto;
   }
 }
@@ -45,6 +120,7 @@
 .slider-example__button {
   border: 0;
   padding: 4px 6px;
+  user-select: none;
 
   @include font-oswald-upper(16px, 20px);
 
@@ -62,15 +138,30 @@
       left: 12px;
       bottom: 5px;
       width: calc(100% - 24px);
-      border-top: 1px dotted rgba(0, 0, 0, 0.24);
+      border-top: 1px dotted rgba($color: #000000, $alpha: 0.24);
       content: "";
+    }
+  }
+
+  &:hover::after {
+    @media (min-width: $tablet-width) {
+      transition: border-top 0.4s ease;
+      border-top: 1px solid rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+
+  &:active::after {
+    @media (min-width: $tablet-width) {
+      transition: none;
+      border: none;
     }
   }
 }
 
 .slider-example__bar {
   position: relative;
-  width: 85px;
+  flex-basis: 85px;
+  flex-shrink: 0;
   height: 14px;
   margin: auto 13px;
   border: 1px solid $special-grey;
@@ -78,7 +169,7 @@
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    width: 426px;
+    flex-basis: 426px;
     height: 6px;
     background-color: #dcdcdc;
   }
@@ -87,18 +178,17 @@
 .slider-example__pointer {
   position: absolute;
   top: 50%;
-  right: auto;
-  left: 6px;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-100%, -50%);
   height: 6px;
-  width: 42%;
+  width: 43%;
   background-color: $basic-green;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: default;
+  transition: transform 0.3s ease;
 
-  &--right {
-    right: 6px;
-    left: auto;
+  &--after {
+    transform: translate(0, -50%);
   }
 
   &::before {
@@ -116,13 +206,30 @@
   }
 
   @media (min-width: $tablet-width) {
-    right: auto;
-    left: 50%;
+    transition: none;
+    transform: translateY(-50%);
+    left: -13px;
     width: 34px;
     height: 34px;
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     background-color: #ffffff;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    cursor: pointer;
+  }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      transition: filter 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      transition: none;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+      border: 1px solid $basic-green;
+    }
   }
 }

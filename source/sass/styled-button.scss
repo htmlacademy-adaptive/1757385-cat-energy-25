@@ -4,8 +4,28 @@
   text-align: center;
   background-color: $basic-green;
 
+  &:hover {
+    transition: background-color 0.4s ease;
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    transition: none;
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
   &--grey {
     color: $special-dark-grey;
     background-color: $basic-grey;
+
+    &:hover {
+      transition: background-color 0.4s ease;
+      background-color: $special-grey-2;
+    }
+
+    &:active {
+      transition: none;
+      color: rgba($color: $special-dark-grey, $alpha: 0.3);
+    }
   }
 }

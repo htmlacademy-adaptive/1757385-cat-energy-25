@@ -19,7 +19,7 @@
 .main-footer__logo-link {
   width: 100%;
   text-align: center;
-  padding: 39px 0 32px;
+  padding: 38px 0 32px;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
@@ -27,12 +27,28 @@
     border: 0;
     width: auto;
   }
+
+  &[href]:hover {
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    transition: none;
+    opacity: 0.6;
+  }
 }
 
 .main-footer__logo-image {
   width: 128px;
   height: 24px;
   vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 128px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
 }
 
 .main-footer__social {
@@ -43,7 +59,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     border: 0;
-    max-width: 350px;
+    flex-grow: 1;
   }
 }
 
@@ -54,5 +70,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     width: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
   }
 }

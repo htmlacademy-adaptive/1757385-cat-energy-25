@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
@@ -7,17 +7,23 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 76px;
+    margin-bottom: 75px;
   }
 }
 
 .catalog__title {
   margin-top: 27px;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   color: #000000;
 
   @media (min-width: $tablet-width) {
+    margin-top: 25px;
     margin-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 18px;
+    margin-bottom: 85px;
   }
 }
 
@@ -37,15 +43,13 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 63px 80px;
+    gap: 61px 80px;
   }
 }
 
 .catalog__item {
   position: relative;
   width: 100%;
-  margin-top: 8px;
-  margin-bottom: 8px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -54,7 +58,7 @@
 
   &::after {
     position: absolute;
-    bottom: -8px;
+    bottom: 0;
     left: -10vw;
     width: 110vw;
     height: 1px;
@@ -68,7 +72,7 @@
 
   &:first-child::before {
     position: absolute;
-    top: -8px;
+    top: 0;
     left: -20px;
     width: 100vw;
     height: 1px;

@@ -15,7 +15,7 @@
 
   @media (min-width: $desktop-width) {
     position: static;
-    margin-bottom: 82px;
+    margin-bottom: 77px;
     min-height: 529px;
   }
 
@@ -24,7 +24,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(26vw + 46%);
+    height: calc(25vw + 46%);
     background: $basic-green url("../img/bg/intro-background-mobile.jpg") center / cover no-repeat;
     content: "";
     z-index: -1;
@@ -60,12 +60,12 @@
 
   @media (min-width: $tablet-width) {
     text-align: left;
-    padding: 40px 91px 526px;
+    padding: 24px 119px 527px;
     align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 58px 80px 0;
+    padding: 53px 110px 0;
   }
 }
 
@@ -111,14 +111,14 @@
     height: auto;
     width: 708px;
     z-index: -1;
-    left: 0;
+    left: 30px;
   }
 
   @media (min-width: $desktop-width) {
     width: 552px;
     left: 50%;
     transform: translateX(-29.3%);
-    top: -24px;
+    top: -28px;
     bottom: auto;
     z-index: 0;
   }
@@ -130,11 +130,6 @@
   padding: 11px;
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  background-color: $basic-green;
-  color: #ffffff;
 
   @media (min-width: $tablet-width) {
     width: auto;

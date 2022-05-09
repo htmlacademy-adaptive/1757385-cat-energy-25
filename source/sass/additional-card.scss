@@ -1,57 +1,70 @@
 .additional-card {
   display: grid;
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 225px;
-    gap: 25px;
-    padding: 26px 38px 28px;
+    grid-template-columns: 1fr 50%;
+    gap: 13px;
+    padding: 27px 38px 28px;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 290px 244px;
     gap: 38px;
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
     align-items: center;
   }
 }
 
 .additional-card__title {
   margin-top: 0;
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   @include font-oswald-upper(16px, 1, $special-dark-grey-2);
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
 }
 
 .additional-card__specs-list {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 14px;
   line-height: 1;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin-bottom: 5px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-top: 8px;
   }
 }
 
 .additional-card__specs-title {
   padding: 0;
+  padding-right: 5px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     text-align: right;
+    padding-right: 9px;
   }
 }
 
 .additional-card__specs-value {
   padding: 0;
+  padding-left: 5px;
   text-align: right;
   width: 80px;
 }

@@ -3,18 +3,19 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 70px 0 17px;
+  padding: 80px 0 24px;
 
   background-image: url("../img/bg/plus.svg");
   background-size: 30px 30px;
-  background-position: center top 17px;
+  background-position: center top 26px;
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    padding: 160px 37px 40px;
+    padding: 160px 36px 35px;
+    background-image: url("../img/bg/plus-tablet.svg");
     background-size: 60px 60px;
     background-position: center top 52px;
-    margin-top: 70px;
+    margin-top: 81px;
     border: 2px solid #f2f2f2;
   }
 }
