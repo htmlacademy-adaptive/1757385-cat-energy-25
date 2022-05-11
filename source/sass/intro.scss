@@ -30,7 +30,7 @@
     z-index: -1;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/bg/intro-background-mobile@2x.jpg") center / cover no-repeat;
+      background: $basic-green url("../img/bg/intro-background-mobile@2x.jpg") center / cover no-repeat;
     }
 
     @media (min-width: $tablet-width) {
@@ -41,11 +41,15 @@
       left: 50%;
       width: 50%;
       height: 694px;
-      background: url("../img/bg/intro-background-desktop.jpg") top left / cover no-repeat;
+      background: $basic-green url("../img/bg/intro-background-desktop.jpg") top left / cover no-repeat;
+      background-color: $basic-green;
+      background-position: top left;
+      background-size: color;
+      background-repeat: no-repeat;
     }
 
     @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
-      background: url("../img/bg/intro-background-desktop@2x.jpg") top left / cover no-repeat;
+      background: $basic-green url("../img/bg/intro-background-desktop@2x.jpg") top left / cover no-repeat;
     }
   }
 }
@@ -103,7 +107,7 @@
 
 .intro__image {
   width: 280px;
-  height: 270px;
+  min-height: 270px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
