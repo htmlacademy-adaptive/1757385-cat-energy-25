@@ -11,6 +11,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+  }
 }
 
 .inner-columns__content {
