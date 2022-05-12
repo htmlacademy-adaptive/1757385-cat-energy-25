@@ -42,14 +42,10 @@
       width: 50%;
       height: 694px;
       background: $basic-green url("../img/bg/intro-background-desktop.jpg") top left / cover no-repeat;
-      background-color: $basic-green;
-      background-position: top left;
-      background-size: color;
-      background-repeat: no-repeat;
     }
 
     @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
-      background: $basic-green url("../img/bg/intro-background-desktop@2x.jpg") top left / cover no-repeat;
+      background-image: url("../img/bg/intro-background-desktop@2x.jpg");
     }
   }
 }

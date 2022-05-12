@@ -4,6 +4,7 @@ import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
+import webpcss from 'gulp-webpcss';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
@@ -21,8 +22,14 @@ export const styles = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      csso(),
     ]))
+    .pipe(
+			webpcss({
+				webpClass: '.webp',
+				noWebpClass: '.no-webp'
+			})
+		)
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
@@ -66,10 +73,12 @@ const copyImages = () => {
 }
 
 // WebP
-const createWebp = () => {
+export const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
-        webp: {}
+        webp: {
+          quality: 90
+        }
       })
     )
     .pipe(gulp.dest('build/img'));
