@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon-32.svg" type="image/svg+xml">
     <link rel="apple-touche-icon" href="img/favicons/apple-icon-180x180.png">
@@ -63,6 +62,10 @@
             Занялся собой? Займись котом!
           </p>
           <picture>
+            <source type="image/webp" media="(min-width: 1280px)" srcset="img/index/can-desktop.webp 1x, img/index/can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index/can-tablet.webp 1x, img/index/can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index/can-mobile.webp 1x, img/index/can-mobile@2x.webp 2x">
+
             <source media="(min-width: 1280px)" srcset="img/index/can-desktop.png 1x, img/index/can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index/can-tablet.jpg 1x, img/index/can-tablet@2x.jpg 2x">
             <img class="intro__image" src="img/index/can-mobile.png" srcset="img/index/can-mobile@2x.png" alt="Наш популярный корм со вкусом курицы." width="280" height="270">
@@ -254,7 +257,7 @@
               <li class="footer-social__item">
                 <a class="footer-social__link" href="https://vk.com/htmlacademy" target="_blank">
                   <span class="visually-hidden">Наша страничка в ВКонтакте</span>
-                  <svg width="27" height="17" aria-hidden="true" focusable="flase">
+                  <svg width="28" height="22" aria-hidden="true" focusable="flase">
                     <use xlink:href="img/sprite.svg#vk-icon"></use>
                   </svg>
                 </a>
@@ -262,7 +265,7 @@
               <li class="footer-social__item">
                 <a class="footer-social__link" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g" target="_blank">
                   <span class="visually-hidden">Наши видео на Youtube</span>
-                  <svg width="24" height="19" aria-hidden="true" focusable="flase">
+                  <svg width="28" height="22" aria-hidden="true" focusable="flase">
                     <use xlink:href="img/sprite.svg#youtube-icon"></use>
                   </svg>
                 </a>
@@ -270,7 +273,7 @@
               <li class="footer-social__item">
                 <a class="footer-social__link" href="https://telegram.me/htmlacademy" target="_blank">
                   <span class="visually-hidden">Наш телеграм-канал</span>
-                  <svg width="20" height="18" aria-hidden="true" focusable="flase">
+                  <svg width="28" height="22" aria-hidden="true" focusable="flase">
                     <use xlink:href="img/sprite.svg#tg-icon"></use>
                   </svg>
                 </a>
