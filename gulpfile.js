@@ -25,11 +25,11 @@ export const styles = () => {
       csso(),
     ]))
     .pipe(
-			webpcss({
-				webpClass: '.webp',
-				noWebpClass: '.no-webp'
-			})
-		)
+      webpcss({
+        webpClass: '.webp',
+        noWebpClass: '.no-webp'
+      })
+    )
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
