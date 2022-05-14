@@ -34,10 +34,11 @@
     }
 
     @media (min-width: $tablet-width) {
-      background: none;
+      display: none;
     }
 
     @media (min-width: $desktop-width) {
+      display: block;
       left: 50%;
       width: 50%;
       height: 694px;

@@ -77,7 +77,7 @@ export const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
         webp: {
-          quality: 90
+          quality: 80
         }
       })
     )
