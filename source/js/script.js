@@ -1,17 +1,49 @@
 // burger menu
-let navButton = document.querySelector('.main-nav__toggle');
-let navMain = document.querySelector('.main-nav');
-let headerMain = document.querySelector('.main-header');
-let body = document.querySelector('.page__body');
+const navButton = document.querySelector('.nav-toggle');
+const navMain = document.querySelector('.main-nav');
+const headerMain = document.querySelector('.main-header');
+const body = document.querySelector('.page__body');
 
 headerMain.classList.remove('no-js');
 
-navButton.addEventListener('click', function () {
-  navMain.classList.toggle('main-nav--opened');
-  body.classList.toggle('page__body--scroll-lock');
+let isMenuOpened = false;
+
+const getMenuOpened = () => {
+  navMain.classList.add('main-nav--opened');
+  body.classList.add('page__body--scroll-lock');
+  navButton.classList.add('is-active');
+  navMain.addEventListener('click', getCloseOverlay);
+  isMenuOpened = true;
+}
+
+const getMenuClosed = () => {
+  navMain.classList.remove('main-nav--opened');
+  body.classList.remove('page__body--scroll-lock');
+  navButton.classList.remove('is-active');
+  navMain.removeEventListener('click', getCloseOverlay);
+  isMenuOpened = false;
+}
+
+const getCloseOverlay = (evt) => {
+  const target = evt.target;
+  if (target.closest('.main-nav__overlay')) {
+    getMenuClosed(evt);
+  }
+}
+
+navButton.addEventListener('click', function(evt) {
+  return isMenuOpened ? getMenuClosed(evt) : getMenuOpened(evt);
 });
 
-var isMobile = window.innerWidth < 768;
+const isSupportWebp =
+  !![].map && document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') === 0
+if (isSupportWebp) {
+  body.classList.add('webp');
+} else {
+  body.classList.add('no-webp');
+}
+
+const isMobile = window.innerWidth < 768;
 
 //slider example
 function SliderExample(slider) {
@@ -162,8 +194,8 @@ SliderExample.prototype.onclickmobile = function (event) {
   }
 }
 
-let sliderExampleEl = document.querySelector('.slider-example');
+const sliderExampleEl = document.querySelector('.slider-example');
 
 if(sliderExampleEl) {
-  let sliderExample = new SliderExample(sliderExampleEl);
+  const sliderExample = new SliderExample(sliderExampleEl);
 }
